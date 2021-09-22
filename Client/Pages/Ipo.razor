@@ -2,15 +2,11 @@
 
 <h1>Input, Processing, and Output</h1>
 
-<p>Input: positive integer</p>
+<p>Input: positive number</p>
 
 <input @bind="InputString "/>
 
-<button class="btn btn-primary" @onclick="DoubleNumber">Process</button>
-
-<p>Output: number doubled is @OutputString </p>
-
-<button class="btn btn-primary" @onclick="EvenOddNumber">Process</button>
+<button class="btn btn-primary" @onclick="DoProcess">Process</button>
 
 <p>Output: the number is @OutputString </p>
 
@@ -22,19 +18,7 @@
 
     private string OutputString { get; set; }
 
-    private void DoubleNumber()
-
-    {
-
-        double num = double.Parse(InputString);
-
-        num = num * 2; 
-
-        OutputString = num.ToString();
-
-    }
-
-    private void EvenOddNumber()
+    private void DoProcess()
 
     {
 
