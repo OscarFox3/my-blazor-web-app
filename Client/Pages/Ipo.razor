@@ -6,9 +6,13 @@
 
 <input @bind="InputString "/>
 
-<button class="btn btn-primary" @onclick="DoProcessing">Do it</button>
+<button class="btn btn-primary" @onclick="DoubleNumber">Process</button>
 
-<p>Output: the number is @Console.WriteLine </p>
+<p>Output: multiplied by 2 is @OutputString </p>
+
+<button class="btn btn-primary" @onclick="EvenOddNumber">Process</button>
+
+<p>Output: the number is @OutputString </p>
 
 @code
 
@@ -18,21 +22,29 @@
 
     private string OutputString { get; set; }
 
-    private void DoProcessing()
+    private void DoubleNumber()
 
     {
 
         double num = double.Parse(InputString);
 
-		if (num % 2 == 0) {
-            Console.WriteLine("Even");
-        }
-        else {
-            Console.WriteLine("Odd");
-        }
+        num = num * 2; 
 
         OutputString = num.ToString();
 
+    }
+
+    private void EvenOddNumber()
+
+    {
+    
+        if (num % 2 == 0) {
+            OutputString = "Even";
+        }
+        else {
+            OutputString = "Odd";
+        }
+    
     }
 
 }
