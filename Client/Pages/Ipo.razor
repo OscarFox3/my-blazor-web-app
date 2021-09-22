@@ -1,14 +1,14 @@
 ﻿@page "/ipo"
 
-<h1>IPO</h1>
+<h1>Input, Processing, and Output</h1>
 
-<p>Input prompt </p>
+<p>Input: positive integer</p>
 
 <input @bind="InputString "/>
 
 <button class="btn btn-primary" @onclick="DoProcessing">Do it</button>
 
-<p>Output: @OutputString </p>
+<p>Output: the number is @Console.WriteLine </p>
 
 @code
 
@@ -24,7 +24,12 @@
 
         double num = double.Parse(InputString);
 
-        num = num * 2; 
+		if (num % 2 == 0) {
+            Console.WriteLine("Even");
+        }
+        else {
+            Console.WriteLine("Odd");
+        }
 
         OutputString = num.ToString();
 
