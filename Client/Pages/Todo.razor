@@ -1,11 +1,13 @@
 ﻿@page "/todo"
 
+// show a count of the number of todo items that aren't complete
 <h1>Todo (@todos.Count(todo => !todo.IsDone))</h1>
 
 <ul>
     @foreach (var todo in todos)
     {
         <li>
+            // checkbox input for each todo item and bind its value to the IsDone property.
             <input type="checkbox" @bind="todo.IsDone" />
             <input @bind="todo.Title" />
         </li>
@@ -18,14 +20,14 @@
 @code {
     private List<TodoItem>
     todos = new();
-    private string newTodo;
+    private string newTodo; // get the title of the new todo item
 
     private void AddTodo()
     {
         if (!string.IsNullOrWhiteSpace(newTodo))
         {
-        todos.Add(new TodoItem { Title = newTodo });
-        newTodo = string.Empty;
+        todos.Add(new TodoItem { Title = newTodo }); // add the TodoItem with the specified title to the list
+        newTodo = string.Empty; // Clear the value of the text input
         }
     }
     }
