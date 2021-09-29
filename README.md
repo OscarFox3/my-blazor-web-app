@@ -1,6 +1,8 @@
 # MyBlazorWebApp
 This is my Blazor web application for COP 3003. <br />
 
+Url to project https://polite-stone-0ff3ecc10.azurestaticapps.net/ <br />
+
 ## Tutorials used to build application
 
 First Blazor app - https://dotnet.microsoft.com/learn/aspnet/blazor-tutorial/intro <br />
