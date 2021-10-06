@@ -1,5 +1,6 @@
 # MyBlazorWebApp
 This is my Blazor web application for COP 3003. <br />
+It's purpose is to be a sandbox for which I can improve my web application devleopment skills. <br />
 
 Url to project https://polite-stone-0ff3ecc10.azurestaticapps.net/ <br />
 
